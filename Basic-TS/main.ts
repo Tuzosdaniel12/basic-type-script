@@ -67,3 +67,50 @@ const subtract = (num1: number = 10, num2?: number): number =>{
 }
 subtract(5, 10);
 subtract(20);
+
+//Interface
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+const fullName = (person: Person) =>{
+    console.log(`${person.firstName} ${person.lastName}`)
+}
+
+let p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+}
+
+fullName(p);
+
+//Classes
+class Employee {
+    protected employeeName: string;
+
+    constructor(name: string){
+        this.employeeName = name;
+    }
+
+    greet() {
+        console.log(`Good Morning ${this.employeeName}`)
+    }
+}
+
+const emp1 = new Employee("Dan");
+emp1.greet();
+
+class Manager extends Employee {
+    constructor(managerName: string){
+        super(managerName);
+    };
+
+    delegateWork(){
+        console.log(`Manager delegating task`);
+    }
+}
+
+let man1 = new Manager('Daniel S');
+man1.delegateWork();
+man1.greet();
