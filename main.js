@@ -35,3 +35,22 @@ if (hasName(randomValue)) {
     console.log(randomValue.name);
 }
 randomValue.toLocaleUpperCase();
+//multi type
+var multiType; // use multi type when the response is not under your control
+multiType = true;
+multiType = 20;
+//----------------Function Declarations----------------//
+var add = function (num1, num2) {
+    return num1 + num2;
+};
+add(2, 5);
+//optional parameters
+var subtract = function (num1, num2) {
+    if (num1 === void 0) { num1 = 10; }
+    if (num2) {
+        return num1 - num2;
+    }
+    return num1;
+};
+subtract(5, 10);
+subtract(20);

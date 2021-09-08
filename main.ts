@@ -43,3 +43,27 @@ if(hasName(randomValue)){
 }
 
 (randomValue as string).toLocaleUpperCase();
+
+//multi type
+let multiType: number | boolean; // use multi type when the response is not under your control
+
+multiType = true;
+multiType = 20;
+
+
+//----------------Function Declarations----------------//
+const add = (num1: number, num2: number): number =>{
+    return num1 + num2
+}
+add(2 , 5);
+
+
+//optional parameters
+const subtract = (num1: number = 10, num2?: number): number =>{
+    if(num2) {
+        return num1 - num2;
+    }
+    return num1
+}
+subtract(5, 10);
+subtract(20);
